@@ -47,6 +47,12 @@ function App() {
                     stack Web apps and so more.
                 </p>
 
+                <div className="avatar sm:float-end">
+                    <div className="w-24 rounded">
+                        <img src="https://media.licdn.com/dms/image/v2/D4D03AQHoqpdwMBVN6A/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1724595551392?e=1730332800&v=beta&t=WnkQss2mcsOnql8OEgWud_Ut0-jxhN9SpfqjdgIne9o" />
+                    </div>
+                </div>
+
                 <h2 className="text-xl mt-2">Skills:</h2>
 
                 <ul className="list-disc list-inside">
