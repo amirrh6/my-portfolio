@@ -92,7 +92,13 @@ function App() {
             <div>
                 <div>
                     <h2 className="text-2xl">Neatco, Waterloo, ON</h2>
-                    <h3>Remote Software Developer</h3>
+                    <a
+                        target="_blank"
+                        className="link-primary"
+                        href="https://neatcoeng.com/amirreza-hashemieh"
+                    >
+                        Remote Software Developer
+                    </a>
                     <h4 className="mb-4">
                         <FaCalendarDays className="inline" /> April 2022 - Present
                     </h4>
