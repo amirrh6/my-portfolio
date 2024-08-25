@@ -1,99 +1,89 @@
 import './App.css';
 import Card from './components/Card';
 import ThemeToggle from './components/ThemeToggle';
+import projects from './assets/projects.json';
+
 import { FaCalendarDays } from 'react-icons/fa6';
+import { FaGithub } from 'react-icons/fa';
+import { MdEmail } from 'react-icons/md';
 
 function App() {
-    const projects = {
-        neatco: [
-            {
-                id: 1,
-                title: 'Neatco Utility Tool',
-                desc: '',
-                tags: ['']
-            },
-            {
-                id: 2,
-                title: 'Annotation Utility Web app',
-                desc: '',
-                tags: ['']
-            },
-            {
-                id: 3,
-                title: 'Crash Monitor',
-                desc: '',
-                tags: ['']
-            },
-            {
-                id: 4,
-                title: 'Neatco’s website',
-                desc: '',
-                tags: ['']
-            }
-        ],
-        saimaan: [
-            {
-                id: 1,
-                title: 'DastSaaz',
-                desc: 'Developed and implemented a RESTful API for an online marketplace specializing in handmade products.',
-                tags: ['PHP', 'Sqlite', 'FlightPHP (Routing)']
-            },
-            {
-                id: 2,
-                title: 'Shukul',
-                desc: 'Created and maintained a RESTful API for an online store specializing in pastry and confectionery products.',
-                tags: ['PHP, SQLite,', 'FlightPHP (Routing)', 'Aura SqlQuery (Query Building)']
-            },
-            {
-                id: 3,
-                title: 'PishroTire',
-                desc: 'Designed and developed a RESTful API for an online store specializing in automobile tires.',
-                tags: [
-                    'JavaScript (Runtime: Node.js)',
-                    'Mongoose (MongoDB)',
-                    'Express',
-                    'JWT (for authentication)'
-                ]
-            },
-            {
-                id: 4,
-                title: 'Khanomito',
-                desc: 'Developed a RESTful API for an online store featuring handmade products and foods crafted by women.',
-                tags: ['JavaScript (Runtime: Node.js)', 'Mongoose (MongoDB)', 'Express']
-            }
-        ],
-        others: [
-            {
-                id: 1,
-                title: 'GMB',
-                desc: '',
-                tags: ['']
-            }
-        ]
-    };
-
     return (
-        <>
-            <ThemeToggle />
+        <div className="container mx-auto sm:px-32 text-left">
+            <h1 className="inline text-5xl">My Portfolio</h1>
 
-            <hr className="my-5" />
+            <div className="float-end flex">
+                <a href="#">
+                    <FaGithub />
+                </a>
+                <a href="#">
+                    <MdEmail />
+                </a>
 
-            <div>
-                <h1 className="text-4xl text-orange-500">About me:</h1>
+                <ThemeToggle />
             </div>
 
             <hr className="my-5" />
 
-            <h1 className="text-4xl text-orange-500">Job Experiences:</h1>
+            <h2 className="text-4xl text-orange-500 mb-4">About me:</h2>
+            <div>
+                <p>
+                    I am Amir(reza) Hashemieh, a Software Developer who focuses on Backend
+                    Development but can also manage to do system programming, build full stack Web
+                    apps and so more.
+                </p>
+
+                <h2 className="text-xl mt-2">Skills:</h2>
+
+                <ul className="list-disc list-inside">
+                    <li>
+                        Programming Languages:
+                        <ul className="list-disc list-inside ml-4">
+                            <li>Typescript / JavaScript (Environments: Browser, Node.js)</li>
+                            <li>Python</li>
+                            <li>PHP</li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        Tools and Frameworks
+                        <ul className="list-disc list-inside ml-4">
+                            <li>React</li>
+                            <li>TailwindCSS</li>
+                            <li>Bootstrap</li>
+                            <li>Telegram Bot API</li>
+
+                            <li>Git</li>
+                            <li>Postman, Thunderclient</li>
+                            <li>
+                                Static type checkers, Linters, Bundlers and Formatters for mentioned
+                                technologies (Mypy, Pylint, Prettifier, ESLint, Vite …)
+                            </li>
+
+                            <li>Linux and Shell scripting (Bash)</li>
+
+                            <li>MySQL, SQLite, MongoDB</li>
+
+                            <li>Mongoose ODM</li>
+                            <li>Django (Python), Flask (Python), Express (Node)</li>
+                            <li>Redis</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <hr className="my-5" />
+
+            <h2 className="text-4xl text-orange-500 mb-4">Job Experiences:</h2>
             <div>
                 <div>
-                    <h2 className="text-2xl pt-4 mt-4">Saaimaan, Waterloo, ON</h2>
+                    <h2 className="text-2xl">Neatco, Waterloo, ON</h2>
                     <h3>Remote Software Developer</h3>
-                    <h4>
+                    <h4 className="mb-4">
                         <FaCalendarDays className="inline" /> April 2022 - Present
                     </h4>
 
-                    <p>
+                    <p className="mt-2 mb-4">
                         I have worked on several projects, including but not limited to development
                         of standalone utilities as well as contributing to the company’s mainline
                         projects.
@@ -115,9 +105,9 @@ function App() {
                 </div>
 
                 <div>
-                    <h2 className="text-2xl pt-4 mt-4">Saaimaan, Mashhad, Iran</h2>
+                    <h2 className="text-2xl">Saaimaan, Mashhad, Iran</h2>
                     <h3>Lead backend developer and project manager</h3>
-                    <h4>
+                    <h4 className="mb-4">
                         <FaCalendarDays className="inline" /> August 2019 - October 2021
                     </h4>
 
@@ -139,7 +129,7 @@ function App() {
 
             <hr className="my-5" />
 
-            <h1 className="text-4xl text-orange-500">Notable Freelancing Experiences:</h1>
+            <h2 className="text-4xl text-orange-500 mb-4">Notable Freelancing Experiences:</h2>
             <div>
                 <div className="flex flex-wrap gap-4 justify-center">
                     {projects.others.map((project) => {
@@ -155,7 +145,19 @@ function App() {
                     })}
                 </div>
             </div>
-        </>
+
+            <hr className="my-5" />
+
+            <h2 className="text-4xl text-orange-500 mb-4">Education:</h2>
+            <div>
+                <h2 className="text-2xl">Azad University, Mashhad, Iran</h2>
+
+                <h3>Bachelor’s degree in Software Engineering</h3>
+                <h4>
+                    <FaCalendarDays className="inline" /> January 2020 - July 2024
+                </h4>
+            </div>
+        </div>
     );
 }
 
