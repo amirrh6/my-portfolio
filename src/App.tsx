@@ -4,20 +4,34 @@ import ThemeToggle from './components/ThemeToggle';
 import projects from './assets/projects.json';
 
 import { FaCalendarDays } from 'react-icons/fa6';
-import { FaGithub } from 'react-icons/fa';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
+import { CgWebsite } from 'react-icons/cg';
 
 function App() {
     return (
         <div className="container mx-auto sm:px-32 text-left">
             <h1 className="inline text-5xl">My Portfolio</h1>
 
-            <div className="float-end flex">
-                <a href="#">
-                    <FaGithub />
+            <div className="sm:float-end flex">
+                <a title="Website (Portfolio)" href="">
+                    <CgWebsite className="mt-5" size={24} />
                 </a>
-                <a href="#">
-                    <MdEmail />
+
+                <a title="GitHub profile" target="_blank" href="https://github.com/amirrh6">
+                    <FaGithub className="mt-5" size={24} />
+                </a>
+
+                <a title="Email" target="_blank" href="mailto:amirrezahh6@gmai.com">
+                    <MdEmail className="mt-5" size={24} />
+                </a>
+
+                <a
+                    title="LinkedIn"
+                    target="_blank"
+                    href="https://www.linkedin.com/in/amirreza-hashemieh-494622247/"
+                >
+                    <FaLinkedin className="mt-5" size={24} />
                 </a>
 
                 <ThemeToggle />
@@ -28,9 +42,9 @@ function App() {
             <h2 className="text-4xl text-orange-500 mb-4">About me:</h2>
             <div>
                 <p>
-                    I am Amir(reza) Hashemieh, a Software Developer who focuses on Backend
-                    Development but can also manage to do system programming, build full stack Web
-                    apps and so more.
+                    I am <strong>Amir(reza) Hashemieh</strong>, a Software Developer who focuses on
+                    Backend Development but can also manage to do system programming, build full
+                    stack Web apps and so more.
                 </p>
 
                 <h2 className="text-xl mt-2">Skills:</h2>
